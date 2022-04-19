@@ -13,14 +13,27 @@ public class Lab5_2 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Scanner input = new Scanner(System.in);
+        System.out.print("Nhap ten: ");
+        String name = input.nextLine();
+        menu(name);
         
     }
-    Scanner input = new Scanner(System.in);
+    
     public static ArrayList<String> menu(ArrayList<String> name) {
-        
+        String subname = "Luc";
+        name.add(subname);
+        return name;
     }
     public void nhap() {
-        
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<String> name = new ArrayList<String>();
+        try {
+            String nhapten = new scanner.nextLine();
+            while(true) {
+                name.add(nhapten);
+            }
+        }
     }
     public void xuat() {
         
