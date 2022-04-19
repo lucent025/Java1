@@ -32,9 +32,12 @@ public class Lab5_1 {
             if(scanner.nextLine().equals("N"));
             }
         } catch(Exception e){
+            double sum = 0;
             for(Double x : sothuc){
                 System.out.println(x);
+                sum += x;
             }
+            System.out.printf("Tong la: %.2f\n",sum);
          }        
     }
 }
