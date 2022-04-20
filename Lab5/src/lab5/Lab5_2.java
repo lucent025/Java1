@@ -9,22 +9,23 @@ import java.util.ArrayList;
 import java.util.Collections;
 public class Lab5_2 {
 
-    /**
-     * @param args the command line arguments
-     */
+    static ArrayList name = new ArrayList<String>();
+    
     public static void main(String[] args) {
         // TODO code application logic here
         menu();
         
     }
     
-    public static void menu() {
+    static void menu() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Nhap ten: ");
+        System.out.print("Nhap lua chon: ");
         int luachon = scanner.nextInt();
         switch(luachon){
             case 1:
-                nhap();
+                String ten = scanner.nextLine();
+                System.out.print("Nhap ten: ");
+                nhap(ten);
                 menu();
                 break;
             case 2:
@@ -39,43 +40,56 @@ public class Lab5_2 {
                 ngaunhien();
                 menu();
                 break;
+            case 6:
+                System.exit(0);
             default:
                 menu();
         }
     }
-    public static ArrayList<String> nhap() {
+    static ArrayList nhap(String nhapten) {
         Scanner scanner = new Scanner(System.in);
-        ArrayList<String> name = new ArrayList<String>();
-        System.out.print("Nhap ten: ");
+        
         while(true){
-            String nhapten = scanner.nextLine();
+            nhapten = scanner.nextLine();
             name.add(nhapten);
             
-            System.out.print("Nhap them (N)? ");
+            System.out.print("Nhap them (Y/N)? ");
             if(scanner.nextLine().equals("N")) {
                break; 
+            } else {
+                System.out.print("Nhap ten: ");
             }
         }
         return name;
     }
-    public static void xuat() {
+    static void xuat() {
      
-        System.out.print(nhap());
+        System.out.println(name);
+        for(var x : name){
+                System.out.println(x);
+            }
         
     }
-    public static void sapxep() {
+    static void sapxep() {
         
-       Collections.sort(nhap());
-       System.out.print(nhap());
-        
-    }
-    public static void ngaunhien() {
-        
-        Collections.shuffle(nhap());
-        System.out.print(nhap());
+       Collections.sort(name);
+       System.out.println(name);
+       for(var x : name){
+                System.out.println(x);
+            }
         
     }
-    public static void xoa() {
+    static void ngaunhien() {
+        
+        Collections.shuffle(name);
+        System.out.println(name);
+        for(var x : name){
+                System.out.println(x);
+            }
         
     }
+    static void xoa() {
+        
+    }
+
 }
