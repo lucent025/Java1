@@ -19,36 +19,59 @@ public class Lab5_2 {
     }
     
     static void menu() {
-        Scanner scanner = new Scanner(System.in);
+        System.out.print("+----------------------------------------+\n");
+        System.out.print("|                                        |\n");      
+        System.out.print("|    1. Nhap.                            |\n");
+        System.out.print("|    2. Xuat.                            |\n");
+        System.out.print("|    3. Sap xep.                         |\n");
+        System.out.print("|    4. Xao tron.                        |\n");
+        System.out.print("|    5. Xoa.                             |\n");
+        System.out.print("|    6. Ket thuc chuong trinh.           |\n");
+        System.out.print("|                                        |\n");        
+        System.out.print("+----------------------------------------+\n");
         System.out.print("Nhap lua chon: ");
-        int luachon = scanner.nextInt();
-        switch(luachon){
-            case 1:
-                String ten = scanner.nextLine();
-                System.out.print("Nhap ten: ");
-                nhap(ten);
-                menu();
-                break;
-            case 2:
-                xuat();
-                menu();
-                break;
-            case 3:
-                sapxep();
-                menu();
-                break;
-            case 4:
-                ngaunhien();
-                menu();
-                break;
-            case 5:
-                xoa();
-                menu();
-                break;
-            case 6:
-                System.exit(0);
-            default:
-                menu();
+        try {
+            int luachon = scanner.nextInt();
+            switch(luachon){
+                case 1:
+                    String ten = scanner.nextLine();
+                    System.out.print("Nhap ten: ");
+                    nhap(ten);
+                    menu();
+                    break;
+                case 2:
+                    xuat();
+                    menu();
+                    break;
+                case 3:
+                    sapxep();
+                    menu();
+                    break;
+                case 4:
+                    ngaunhien();
+                    menu();
+                    break;
+                case 5:
+                    xoa();
+                    menu();
+                    break;
+                case 6:
+                    System.exit(0);
+                default:
+                    System.out.print("####################################\n");
+                    System.out.print("#                                  #\n");
+                    System.out.print("#    Nhap sai, xin hay nhap lai!   #\n");
+                    System.out.print("#                                  #\n");
+                    System.out.print("####################################\n");
+                    menu();
+            }
+        } catch (Exception e) {
+                    System.out.print("############################################\n");
+                    System.out.print("#                                          #\n");
+                    System.out.print("#    Nhap sai, thoat chuong trinh sau 5s   #\n");
+                    System.out.print("#                                          #\n");
+                    System.out.print("############################################\n");
+                    System.exit(5);
         }
     }
     static ArrayList nhap(String nhapten) {
@@ -57,7 +80,7 @@ public class Lab5_2 {
             name.add(nhapten);
             
             System.out.print("Nhap them (Y/N)? ");
-            if(scanner.nextLine().equals("N")) {
+            if(scanner.nextLine().equals("N") || scanner.nextLine().equals("n")) {
                break; 
             } else {
                 System.out.print("Nhap ten: ");
@@ -103,6 +126,6 @@ public class Lab5_2 {
         for(var x : name){
                 System.out.println(x);
             }
+        
     }
-
 }
