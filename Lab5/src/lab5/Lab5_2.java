@@ -10,6 +10,7 @@ import java.util.Collections;
 public class Lab5_2 {
 
     static ArrayList name = new ArrayList<String>();
+    static Scanner scanner = new Scanner(System.in);
     
     public static void main(String[] args) {
         // TODO code application logic here
@@ -40,6 +41,10 @@ public class Lab5_2 {
                 ngaunhien();
                 menu();
                 break;
+            case 5:
+                xoa();
+                menu();
+                break;
             case 6:
                 System.exit(0);
             default:
@@ -47,8 +52,6 @@ public class Lab5_2 {
         }
     }
     static ArrayList nhap(String nhapten) {
-        Scanner scanner = new Scanner(System.in);
-        
         while(true){
             nhapten = scanner.nextLine();
             name.add(nhapten);
@@ -90,6 +93,16 @@ public class Lab5_2 {
     }
     static void xoa() {
         
+        for(var x : name){
+                System.out.printf("%d. %s\n",name.indexOf(x),x);
+            }
+        System.out.print("Nhap so thu tu ten muon xoa: ");
+        int stt = scanner.nextInt();
+        name.remove(stt);
+        System.out.println(name);
+        for(var x : name){
+                System.out.println(x);
+            }
     }
 
 }
