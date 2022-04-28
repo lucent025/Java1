@@ -75,7 +75,7 @@ public class Lab5_2 {
             name.add(nhapten);
 
             System.out.print("Nhap them (Y/N)? ");
-            if (scanner.nextLine().equals("N") || scanner.nextLine().equals("n")) {
+            if (scanner.nextLine().equalsIgnoreCase("n")) {
                 break;
             } else {
                 System.out.print("Nhap ten: ");
