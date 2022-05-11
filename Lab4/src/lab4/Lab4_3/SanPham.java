@@ -4,8 +4,6 @@
  */
 package lab4.Lab4_3;
 
-import lab4.Lab4_2.*;
-import lab4.Lab4_1.*;
 import java.util.Scanner;
 
 public class SanPham {
