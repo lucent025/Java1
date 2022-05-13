@@ -9,9 +9,9 @@ import java.util.Scanner;
  * @author hoangluc
  */
 public class Lab2_2 {
-    public static void main(String[] args){
-        ptbac2();
-    }
+//    public static void main(String[] args){
+//        ptbac2();
+//    }
     
     public static void ptbac2(){
                 Scanner scanner = new Scanner(System.in);

@@ -9,9 +9,9 @@ import java.util.Scanner;
  * @author hoangluc
  */
 public class Lab2_3 {
-    public static void main(String[] args){
-        tiendien();
-    }
+//    public static void main(String[] args){
+//        tiendien();
+//    }
     public static void tiendien(){
         
         Scanner scanner = new Scanner(System.in);

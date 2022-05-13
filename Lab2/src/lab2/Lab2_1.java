@@ -13,10 +13,10 @@ public class Lab2_1 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        ptbac1();
-    }
+//    public static void main(String[] args) {
+//        // TODO code application logic here
+//        ptbac1();
+//    }
     public static void ptbac1(){
         Scanner scanner = new Scanner(System.in);
         
