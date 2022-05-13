@@ -31,5 +31,7 @@ public class Lab6 {
         System.out.printf("Ho ten: %s\n", hoTen);
 
     }
+    
+    
 
 }
