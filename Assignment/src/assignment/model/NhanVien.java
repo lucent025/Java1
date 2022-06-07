@@ -1,4 +1,4 @@
-package assignment;
+package assignment.model;
 
 public class NhanVien {
 
@@ -6,6 +6,9 @@ public class NhanVien {
     protected String chucVu;
     protected String maSoNV;
     protected double luongNV;
+    
+    public NhanVien() {
+    }
 
     public NhanVien(String maSoNV, String tenNV, String chucVu, double luongNV) {
         this.maSoNV = maSoNV;
@@ -13,6 +16,7 @@ public class NhanVien {
         this.chucVu = chucVu;
         this.luongNV = luongNV;
     }
+
 
  
 
@@ -36,9 +40,7 @@ public class NhanVien {
         return maSoNV;
     }
 
-    public void setMaSoNV(String maSoNV) {
-        this.maSoNV = maSoNV;
-    }
+
 
     public double getLuongNV() {
         return luongNV;

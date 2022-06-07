@@ -1,11 +1,12 @@
 package assignment.model;
 
-import assignment.NhanVien;
-
 public class NhanVienTiepThi extends NhanVien {
 
     protected double doanhSo;
     protected double hueHong;
+
+    public NhanVienTiepThi() {
+    }
     
     public NhanVienTiepThi(String maSoNV, String tenNV, String chucVu, double luongNV, double doanhSo, double hueHong) {
         super(maSoNV, tenNV, chucVu, luongNV);
@@ -29,7 +30,7 @@ public class NhanVienTiepThi extends NhanVien {
         this.hueHong = hueHong;
     }
 
-    @Override
+    @Override //annotation = nhac nho?
     public double getThuNhap() {
         return luongNV = doanhSo + hueHong + luongNV;
     }

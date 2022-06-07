@@ -1,11 +1,12 @@
 package assignment.model;
 
-import assignment.NhanVien;
-
 public class TruongPhong extends NhanVien {
 
     protected double trachNhiem;
 
+    public TruongPhong() {
+    }
+    
     public TruongPhong(String maSoNV, String tenNV, String chucVu, double luongNV, double trachNhiem) {
         super(maSoNV, tenNV, chucVu, luongNV);
         this.trachNhiem = trachNhiem;
